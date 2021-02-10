@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <BarChart :chart_data="barChartData"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import BarChart from './components/BarChart.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    BarChart
+  },
+  data() {
+    return {
+      barChartData: [
+        { name: 'Andre Francois', value: 100 },
+        { name: 'Eric Liu', value: 50 },
+        { name: 'Scott Darvin', value: 20 }
+      ] 
+    }
   }
 }
 </script>
